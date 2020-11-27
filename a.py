@@ -5,7 +5,7 @@ import requests
 
 webpage = 'http://www.ebi.ac.uk/ena/data/view/'
 api='&display=fasta'
-links=[f"{webpage}BM{i:0>6}{api}" for i in range(1,5)]
+links=[f"{webpage}BN{i:0>6}{api}" for i in range(1,5)]
 
 for link in map(requests.get,links):
     if link.status_code >= 300:
